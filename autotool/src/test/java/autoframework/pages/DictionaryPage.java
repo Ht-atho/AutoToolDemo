@@ -1,18 +1,13 @@
 package autoframework.pages;
 
-import net.thucydides.core.annotations.DefaultUrl;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import net.serenitybdd.core.pages.WebElementFacade;
-import java.util.stream.Collectors;
 
-import net.serenitybdd.core.annotations.findby.FindBy;
 
 import net.thucydides.core.pages.PageObject;
 
-import java.util.List;
 
 import static org.openqa.selenium.By.cssSelector;
 
@@ -42,9 +37,6 @@ public class DictionaryPage extends PageObject {
     public void clickLogin() {
         getDriver().findElement(loginBtn).click();
     }
-    public void clickContactReq() {
-        getDriver().findElement(CVDBtn).click();
-    }
 
     public String getErrorMessage() {
 
@@ -53,8 +45,14 @@ public class DictionaryPage extends PageObject {
     public void clickfgBtn(){
         getDriver().findElement(fgBtn).click();
     }
-    public void txt_successfully(String actualurl) {
-//        String actualurl="https://mektoube.fr/main/discoveries";
+    public void txt_login_successfully() {
+        String actualurl="https://mektoube.fr/main/discoveries";
+        String expectedurl = getDriver().getCurrentUrl();
+        Assert.assertEquals(expectedurl,actualurl);
+    }
+// go to Forgot Password page successfully
+    public void FgPage(String actualurl) {
+//      String actualurl="https://mektoube.fr/forgot-password";
         String expectedurl = getDriver().getCurrentUrl();
         Assert.assertEquals(expectedurl,actualurl);
     }

@@ -5,12 +5,12 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "login fail with incorrect email",
+  "name": "login successfully",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@test02"
+      "name": "@test01"
     }
   ]
 });
@@ -25,7 +25,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Insert \u0027yassine_yes3\u0027 into the Email field",
+  "name": "Insert \u0027yassine_yes\u0027 into the Email field",
   "keyword": "When "
 });
 formatter.match({
@@ -55,11 +55,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Show error-box : Incorrect username or password",
+  "name": "User login successfully into front site",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "DefinitionSteps.error_box()"
+  "location": "DefinitionSteps.user_login_successfully_into_front_site()"
 });
 formatter.result({
   "status": "passed"
