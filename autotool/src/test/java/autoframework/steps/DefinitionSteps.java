@@ -40,6 +40,11 @@ public class DefinitionSteps {
         System.out.println("Click login button");
         anna.clickLogin();
     }
+    @When("^Click forgot password button$")
+    public void clivkfgButton(){
+        System.out.println("click forgot password button");
+        anna.clickfgBtn();
+    }
 
 //    @Then("^The user will be on the home page '(.*)'$")
 ////    public void aErrorMessageWillBeDisplay(String url2) {
@@ -51,10 +56,10 @@ public class DefinitionSteps {
 //        System.out.println("go to the " + url);
 //        anna.gotoUrl(url);
 //    }
-    @Then("^User login successfully into front site$")
-    public void user_login_successfully_into_front_site() throws Exception {
+    @Then("^User login successfully into '(.*)' front site$")
+    public void user_login_successfully_into_front_site(String actualurl) throws Exception {
         System.out.println("login successfully");
-        anna.successfully();
+        anna.successfully(actualurl);
 
     }
     @Then("^Show error-box$")

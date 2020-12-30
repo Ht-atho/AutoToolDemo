@@ -6,13 +6,13 @@ Feature: As a user, i want to login into the Mektoube
     When Insert 'yassine_yes' into the Email field
     When Insert 'Mektoubi2017' into the Password field
     When Click login button
-    Then User login successfully into front site
+    Then User login successfully into 'https://mektoube.fr/main/discoveries' front site
 
   @test02
   Scenario: login fail with incorrect email
     Given Go to 'https://mektoube.fr/login' url
     When Insert 'yassine_yes3' into the Email field
-hen Insert 'Mektoubi2017' into the Password field
+    When Insert 'Mektoubi2017' into the Password field
     When Click login button
     Then Show error-box
 
@@ -27,8 +27,5 @@ hen Insert 'Mektoubi2017' into the Password field
   @test04
   Scenario: forgot the password
     Given Go to 'https://mektoube.fr/login' url
-    When Insert 'yassine_yes' into the Email field
-    When Insert 'Mektoubi2018' into the Password field
-    When Click login button
-    Then Show error-box
-
+    When Click forgot password button
+    Then User login successfully into 'https://mektoube.fr/forgot-password' front site

@@ -1,8 +1,8 @@
-autoframework/steps/DefinitionSteps.java
- autoframework.steps.DefinitionSteps
+autoframework/DefinitionTestSuite.java
+ autoframework.DefinitionTestSuite
 autoframework/steps/serenity/EndUserSteps.java
  autoframework.steps.serenity.EndUserSteps
 autoframework/pages/DictionaryPage.java
  autoframework.pages.DictionaryPage
-autoframework/DefinitionTestSuite.java
- autoframework.DefinitionTestSuite
+autoframework/steps/DefinitionSteps.java
+ autoframework.steps.DefinitionSteps

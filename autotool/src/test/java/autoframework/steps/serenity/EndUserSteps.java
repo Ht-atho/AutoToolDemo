@@ -29,14 +29,14 @@ public class EndUserSteps {
     public void clickLogin() {
         dictionaryPage.clickLogin();
     }
-    public void clickContactReq(){ dictionaryPage.clickContactReq();}
+    public void clickfgBtn(){ dictionaryPage.clickfgBtn();}
 
     public String getErrorMessage() {
         return dictionaryPage.getErrorMessage();
     }
 
-    public void successfully() {
-         dictionaryPage.txt_successfully();
+    public void successfully(String actualurl) {
+         dictionaryPage.txt_successfully(actualurl);
     }
 //    public void contact_req_successfully(){
 //        dictionaryPage.contact_req_successfully();

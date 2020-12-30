@@ -25,7 +25,7 @@ public class DictionaryPage extends PageObject {
     By passwordInp = By.name("password");
     By loginBtn = By.className("mdc-button__label");
     By CVDBtn = By.cssSelector("a[href*='contact-requests']");
-//    By fgBtn    = By.name("")
+    By fgBtn    = By.cssSelector("a[href*='forgot-password'");
 
     public void gotoUrl(String url) {
         getDriver().get(url);
@@ -50,9 +50,11 @@ public class DictionaryPage extends PageObject {
 
         return getDriver().findElement(cssSelector("div[class=error-box]")).getText();
     }
-
-    public void txt_successfully() {
-        String actualurl="https://mektoube.fr/main/discoveries";
+    public void clickfgBtn(){
+        getDriver().findElement(fgBtn).click();
+    }
+    public void txt_successfully(String actualurl) {
+//        String actualurl="https://mektoube.fr/main/discoveries";
         String expectedurl = getDriver().getCurrentUrl();
         Assert.assertEquals(expectedurl,actualurl);
     }
