@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="As a user, i want to login into the Mektoube" skipped="0" tests="1" time="12.24" timestamp="2020-12-31T11:03:38.724977250+07:00[Asia/Ho_Chi_Minh]"><testcase name="login successfully"><error message="current thread is not owner" type="java.lang.IllegalMonitorStateException">current thread is not owner</error><system-err>current thread is not owner
+autoframework.pages.DictionaryPage.loginSuccess(DictionaryPage.java:65)
+autoframework.steps.serenity.EndUserSteps.login_successfully(EndUserSteps.java:39)
+autoframework.steps.DefinitionSteps.userLoginSuccessfullyIntoHttpsMektoubeFrMainDiscoveriesFrontSite(DefinitionSteps.java:63)
+✽.User login successfully into 'https://mektoube.fr/main/discoveries' front site(src/test/resources/features/MyTest.feature:9)
+</system-err></testcase></testsuite>

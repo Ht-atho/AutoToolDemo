@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="As a user, i want to login into the Mektoube" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-12-31T04:03:38" hostname="thanh" time="12.077">
+  <properties/>
+  <testcase name="login successfully" classname="As a user, i want to login into the Mektoube" time="12.077">
+    <failure message="java.lang.IllegalMonitorStateException: current thread is not owner" type="java.lang.IllegalMonitorStateException">java.lang.IllegalMonitorStateException: current thread is not owner
+	at java.base/java.lang.Object.wait(Native Method)
+	at autoframework.pages.DictionaryPage.loginSuccess(DictionaryPage.java:65)
+	at autoframework.steps.serenity.EndUserSteps.login_successfully(EndUserSteps.java:39)
+	at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070.CGLIB$login_successfully$6(&lt;generated&gt;)
+	at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070$$FastClassByCGLIB$$324deb22.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:338)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:127)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:63)
+	at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070.login_successfully(&lt;generated&gt;)
+	at autoframework.steps.DefinitionSteps.userLoginSuccessfullyIntoHttpsMektoubeFrMainDiscoveriesFrontSite(DefinitionSteps.java:63)
+	at ✽.User login successfully into 'https://mektoube.fr/main/discoveries' front site(src/test/resources/features/MyTest.feature:9)
+</failure>
+  </testcase>
+  <system-out><![CDATA[go to the https://mektoube.fr/login
+insert the username
+insert the password
+Click login button
+login Successfully
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 9491
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 11:03:39 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
