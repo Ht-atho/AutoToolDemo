@@ -11,7 +11,7 @@ public class EndUserSteps {
     }
 
     //login
-    public void insertEmail(String email) {
+    public void insertEmail(String email) throws InterruptedException {
         dictionaryPage.insertEmail(email);
     }
 
@@ -22,9 +22,7 @@ public class EndUserSteps {
     public void clickLogin() {
         dictionaryPage.clickLogin();
     }
-    public void login_successfully(){
-        dictionaryPage.txt_login_successfully();
-    }
+
     public String getErrorMessage() {
         return dictionaryPage.getErrorMessage();
     }
@@ -32,9 +30,12 @@ public class EndUserSteps {
 
     //test04- click forgot password button
     public void clickfgBtn(){ dictionaryPage.clickfgBtn();}
-    public void successfully(String actualurl) {
-        dictionaryPage.FgPage(actualurl);
+    public void successfully(String expectrul) {
+        dictionaryPage.FgPage(expectrul);
     }
 
 
+    public void login_successfully(String expecturl) throws InterruptedException {
+        dictionaryPage.loginSuccess(expecturl);
+    }
 }

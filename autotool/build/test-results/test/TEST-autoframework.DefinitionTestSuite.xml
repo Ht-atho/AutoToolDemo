@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="autoframework.DefinitionTestSuite" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="hoaithanh" time="0.0">
+<testsuite name="autoframework.DefinitionTestSuite" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="thanh" time="0.0">
   <properties/>
   <system-out><![CDATA[
-1 Scenarios (?[32m1 passed?[0m)
-5 Steps (?[32m5 passed?[0m)
-2m8.145s
+?[31mFailed scenarios:?[0m
+?[31msrc/test/resources/features/MyTest.feature:4 ?[0m# login successfully
+
+1 Scenarios (?[31m1 failed?[0m)
+5 Steps (?[31m1 failed?[0m, ?[32m4 passed?[0m)
+0m12.286s
+
+java.lang.IllegalMonitorStateException: current thread is not owner
+	at java.base/java.lang.Object.wait(Native Method)
+	at autoframework.pages.DictionaryPage.loginSuccess(DictionaryPage.java:65)
+	at autoframework.steps.serenity.EndUserSteps.login_successfully(EndUserSteps.java:39)
+	at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070.CGLIB$login_successfully$6(<generated>)
+	at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070$$FastClassByCGLIB$$324deb22.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:338)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:127)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:63)
+	at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070.login_successfully(<generated>)
+	at autoframework.steps.DefinitionSteps.userLoginSuccessfullyIntoHttpsMektoubeFrMainDiscoveriesFrontSite(DefinitionSteps.java:63)
+	at ✽.User login successfully into 'https://mektoube.fr/main/discoveries' front site(src/test/resources/features/MyTest.feature:9)
 
 ]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".

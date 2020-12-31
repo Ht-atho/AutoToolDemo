@@ -20,7 +20,7 @@ public class DefinitionSteps {
     }
 
     @When("^Insert '(.*)' into the Email field$")
-    public void insertAIntoTheEmailField(String email) {
+    public void insertAIntoTheEmailField(String email) throws InterruptedException {
         System.out.println("insert the username");
         anna.insertEmail(email);
     }
@@ -42,23 +42,24 @@ public class DefinitionSteps {
         System.out.println("login fail");
         anna.getErrorMessage();
     }
-    @Then ("^User login successfully into front site$")
-    public void user_login_successfully_into_front_site() throws Exception {
-        System.out.println("login successfully");
-        anna.login_successfully();
 
-    }
     //test 04 - forgot password button
 
     @When("^Click forgot password button$")
-    public void clivkfgButton(){
+    public void clickfgButton(){
         System.out.println("click forgot password button");
         anna.clickfgBtn();
     }
     @Then("^User go to successfully into '(.*)' front site$")
-    public void user_go_to_successfully_into_front_site(String actualurl) throws Exception {
+    public void user_go_to_successfully_into_front_site(String expecturl) throws Exception {
         System.out.println("go to forgot password page successfully");
-        anna.successfully(actualurl);
+        anna.successfully(expecturl);
 
+    }
+
+    @Then("^User login successfully into '(.*)' front site$")
+    public void userLoginSuccessfullyIntoHttpsMektoubeFrMainDiscoveriesFrontSite(String expecturl) throws InterruptedException {
+        System.out.println("login Successfully");
+        anna.login_successfully(expecturl);
     }
 }

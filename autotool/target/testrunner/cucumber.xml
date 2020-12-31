@@ -1,10 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="124.711415">
-<testcase classname="As a user, i want to login into the Mektoube" name="login successfully" time="124.711415">
-<system-out><![CDATA[Given Go to 'https://mektoube.fr/login' url.................................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="12.111958">
+<testcase classname="As a user, i want to login into the Mektoube" name="login successfully" time="12.111958">
+<failure message="java.lang.IllegalMonitorStateException: current thread is not owner&#10;&#9;at java.base/java.lang.Object.wait(Native Method)&#10;&#9;at autoframework.pages.DictionaryPage.loginSuccess(DictionaryPage.java:65)&#10;&#9;at autoframework.steps.serenity.EndUserSteps.login_successfully(EndUserSteps.java:39)&#10;&#9;at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070.CGLIB$login_successfully$6(&lt;generated&gt;)&#10;&#9;at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070$$FastClassByCGLIB$$324deb22.invoke(&lt;generated&gt;)&#10;&#9;at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)&#10;&#9;at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)&#10;&#9;at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)&#10;&#9;at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:338)&#10;&#9;at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:127)&#10;&#9;at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:63)&#10;&#9;at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070.login_successfully(&lt;generated&gt;)&#10;&#9;at autoframework.steps.DefinitionSteps.userLoginSuccessfullyIntoHttpsMektoubeFrMainDiscoveriesFrontSite(DefinitionSteps.java:63)&#10;&#9;at ✽.User login successfully into 'https://mektoube.fr/main/discoveries' front site(src/test/resources/features/MyTest.feature:9)&#10;"><![CDATA[Given Go to 'https://mektoube.fr/login' url.................................passed
 When Insert 'yassine_yes' into the Email field..............................passed
 When Insert 'Mektoubi2017' into the Password field..........................passed
 When Click login button.....................................................passed
-Then User login successfully into front site................................passed
-]]></system-out>
+Then User login successfully into 'https://mektoube.fr/main/discoveries' front site.failed
+
+StackTrace:
+java.lang.IllegalMonitorStateException: current thread is not owner
+	at java.base/java.lang.Object.wait(Native Method)
+	at autoframework.pages.DictionaryPage.loginSuccess(DictionaryPage.java:65)
+	at autoframework.steps.serenity.EndUserSteps.login_successfully(EndUserSteps.java:39)
+	at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070.CGLIB$login_successfully$6(<generated>)
+	at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070$$FastClassByCGLIB$$324deb22.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:338)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:127)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:63)
+	at autoframework.steps.serenity.EndUserSteps$$EnhancerByCGLIB$$409e1070.login_successfully(<generated>)
+	at autoframework.steps.DefinitionSteps.userLoginSuccessfullyIntoHttpsMektoubeFrMainDiscoveriesFrontSite(DefinitionSteps.java:63)
+	at ✽.User login successfully into 'https://mektoube.fr/main/discoveries' front site(src/test/resources/features/MyTest.feature:9)
+]]></failure>
 </testcase>
 </testsuite>
